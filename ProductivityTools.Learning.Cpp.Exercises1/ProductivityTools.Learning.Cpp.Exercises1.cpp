@@ -2,10 +2,30 @@
 //
 
 #include <iostream>
+#include <string>
+using std::cout;
 
 int main()
 {
+   
+    cout("bla bla");
     std::cout << "Hello World!\n";
+    std::string name;
+    std::cin >> name;
+    std::cout << "Hello " << name << std::endl;
+    
+    const std::string line(8, '*');
+    std::cout << line;
+
+    int r = 0;
+    int rows = 10;
+    while (r != rows)
+    {
+        std::cout << "#";
+        ++r;
+    };
+    
+    
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
