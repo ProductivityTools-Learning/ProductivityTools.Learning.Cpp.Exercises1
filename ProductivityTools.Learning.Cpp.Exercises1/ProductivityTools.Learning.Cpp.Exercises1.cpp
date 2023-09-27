@@ -8,7 +8,7 @@ using std::cout;
 int main()
 {
    
-    cout("bla bla");
+    
     std::cout << "Hello World!\n";
     std::string name;
     std::cin >> name;
