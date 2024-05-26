@@ -3,38 +3,33 @@
 
 #include <iostream>
 #include <string>
+//using namespace std;
 using std::cout;
+
+void printName(std::string);
 
 int main()
 {
-   
-    
-    std::cout << "Hello World!\n";
-    std::string name;
-    std::cin >> name;
-    std::cout << "Hello " << name << std::endl;
-    
-    const std::string line(8, '*');
-    std::cout << line;
+	cout << "Hello World!\n";
+	cout << "Give me your name";
+	std::string name;
+	std::cin >> name;
+	printName(name);
+	const std::string line(8, '*');
+	std::cout << line;
 
-    int r = 0;
-    int rows = 10;
-    while (r != rows)
-    {
-        std::cout << "#";
-        ++r;
-    };
-    
-    
+	int r = 0;
+	int rows = 10;
+	while (r != rows)
+	{
+		std::cout << "#";
+		++r;
+	};
+
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+void printName(std::string name)
+{
+	cout << "HEllo" << name << std::endl;
+}
