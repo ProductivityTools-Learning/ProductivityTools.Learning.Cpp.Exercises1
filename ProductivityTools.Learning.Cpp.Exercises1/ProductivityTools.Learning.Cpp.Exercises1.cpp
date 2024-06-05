@@ -9,13 +9,14 @@ using std::cout;
 void printName(std::string);
 void sizes();
 void chars();
+void do_array();
 
 int main()
 {
 	cout << "Hello World!\n";
 	cout << "Give me your name";
 	std::string name;
-	std::cin >> name;
+	//std::cin >> name;
 	printName(name);
 	const std::string line(8, '*');
 	std::cout << line;
@@ -30,6 +31,7 @@ int main()
 
 	sizes();
 	chars();
+	do_array();
 }
 
 void printName(std::string name)
@@ -56,4 +58,14 @@ void chars()
 	cout << "char from the number. Number: " << i << " the representing char";
 	cout.put(i);
 	cout << std::endl;
+}
+
+void do_array()
+{
+	int table[3];
+	for (size_t i = 0; i < 3; i++)
+	{
+		table[i] = i;
+		cout << table[i] << std::endl;
+	}
 }
