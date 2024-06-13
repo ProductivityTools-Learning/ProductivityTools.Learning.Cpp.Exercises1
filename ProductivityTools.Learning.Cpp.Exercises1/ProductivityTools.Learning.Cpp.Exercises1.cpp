@@ -11,13 +11,22 @@ void sizes();
 void chars();
 void do_array();
 
+struct person{
+	std::string first_name;
+	int age;
+};
+
 int main()
 {
 	cout << "Hello World!\n";
 	cout << "Give me your name";
 	std::string name;
-	//std::cin >> name;
-	printName(name);
+	person person;
+	std::cin >> name;
+	person.first_name=name;
+	printName(person.first_name);
+
+
 	const std::string line(8, '*');
 	std::cout << line;
 
