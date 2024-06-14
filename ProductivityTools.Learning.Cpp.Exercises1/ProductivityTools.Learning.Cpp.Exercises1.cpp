@@ -11,7 +11,7 @@ void sizes();
 void chars();
 void do_array();
 
-struct person{
+struct person {
 	std::string first_name;
 	int age;
 };
@@ -23,8 +23,10 @@ int main()
 	std::string name;
 	person person;
 	std::cin >> name;
-	person.first_name=name;
+	person.first_name = name;
 	printName(person.first_name);
+	std::cout << "pointer address to person.firstname:" << &person.first_name << std::endl;
+
 
 
 	const std::string line(8, '*');
@@ -46,6 +48,10 @@ int main()
 void printName(std::string name)
 {
 	cout << "HEllo" << name << std::endl;
+	cout << "pointed address" << &name << std::endl;
+	std::string* pointer = &name;
+	cout << "pointer value:" << pointer << std::endl;
+	cout << "pointer object:" << *pointer << std::endl;
 }
 
 void sizes()
@@ -55,7 +61,7 @@ void sizes()
 	cout << "Int is a size of" << sizeof(n_int) << std::endl;
 	cout << "Short is a size of" << sizeof(n_short) << std::endl;
 	cout << "size of the variable" << sizeof n_int << std::endl;
- }
+}
 
 void chars()
 {
