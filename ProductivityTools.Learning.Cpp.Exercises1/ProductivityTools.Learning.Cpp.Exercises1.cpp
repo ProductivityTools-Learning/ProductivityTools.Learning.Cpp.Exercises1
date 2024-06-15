@@ -10,6 +10,7 @@ void printName(std::string);
 void sizes();
 void chars();
 void do_array();
+void pointer();
 
 struct person {
 	std::string first_name;
@@ -19,6 +20,9 @@ struct person {
 int main()
 {
 	cout << "Hello World!\n";
+
+	pointer();
+
 	cout << "Give me your name";
 	std::string name;
 	person person;
@@ -43,6 +47,14 @@ int main()
 	sizes();
 	chars();
 	do_array();
+}
+
+void pointer()
+{
+	int* pint = new int;
+	*pint = 100;
+	std::cout << "poiinter" << pint << " value:" << *pint << std::endl;
+
 }
 
 void printName(std::string name)
