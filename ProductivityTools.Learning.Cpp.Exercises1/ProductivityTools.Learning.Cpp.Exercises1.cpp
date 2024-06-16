@@ -11,6 +11,8 @@ void sizes();
 void chars();
 void do_array();
 void pointer();
+void arrayexample();
+void pointerAndStructure();
 
 struct person {
 	std::string first_name;
@@ -20,7 +22,8 @@ struct person {
 int main()
 {
 	cout << "Hello World!\n";
-
+	pointerAndStructure();
+	arrayexample();
 	pointer();
 
 	cout << "Give me your name";
@@ -49,12 +52,32 @@ int main()
 	do_array();
 }
 
+void pointerAndStructure()
+{
+	person p1;
+	p1.age = 10;
+	std::cout << "Person value age" << p1.age << std::endl;
+
+	person* p2 = new person;
+	p2->age = 11;
+	std::cout << "Person value age" << p2->age << std::endl;
+
+}
+
 void pointer()
 {
 	int* pint = new int;
 	*pint = 100;
 	std::cout << "poiinter" << pint << " value:" << *pint << std::endl;
 
+}
+
+void arrayexample()
+{
+	int* aint = new int[10];
+	aint[0] = 1;
+	std::cout << "array value" << aint[0] << std::endl;
+	std::cout << "array not initialized value" << aint[1] << std::endl;
 }
 
 void printName(std::string name)
